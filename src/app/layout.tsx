@@ -5,23 +5,23 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 export const metadata = {
-  title: "Rivant Media NextJs Template",
-  description: "NextJs Template use by Rivant Media",
+	title: "Rivant Media NextJs Template",
+	description: "NextJs Template use by Rivant Media"
 };
 
 export default function RootLayout({
-  children,
+	children
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <head>
-        <ColorSchemeScript />
-      </head>
-      <body>
-        <MantineProvider>{children}</MantineProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<head>
+				<ColorSchemeScript />
+			</head>
+			<body>
+				<MantineProvider>{children}</MantineProvider>
+			</body>
+		</html>
+	);
 }
