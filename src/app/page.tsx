@@ -1,4 +1,6 @@
-function Demo() {
-	return <h1>Welcome Rivant Media</h1>;
+import Demo from "@/components/Demo";
+
+function Home() {
+	return <Demo />;
 }
-export default Demo;
+export default Home;
