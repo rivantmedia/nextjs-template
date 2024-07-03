@@ -1,8 +1,8 @@
 {
-	"name": "next-template",
-	"version": "0.1.0",
-	"private": true,
+	"name": "@rivantmedia/next-template",
+	"version": "1.0.0",
 	"prettier": "@rivantmedia/prettier-config",
+	"bin": "./bin/cli.ts",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -10,19 +10,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@mantine/carousel": "^7.11.1",
-		"@mantine/charts": "^7.11.1",
-		"@mantine/code-highlight": "^7.11.1",
 		"@mantine/core": "^7.11.1",
-		"@mantine/dates": "^7.11.1",
-		"@mantine/dropzone": "^7.11.1",
-		"@mantine/form": "^7.11.1",
 		"@mantine/hooks": "^7.11.1",
-		"@mantine/modals": "^7.11.1",
-		"@mantine/notifications": "^7.11.1",
-		"@mantine/nprogress": "^7.11.1",
-		"@mantine/spotlight": "^7.11.1",
-		"@mantine/tiptap": "^7.11.1",
 		"@rivantmedia/prettier-config": "^3.0.0",
 		"@tabler/icons-react": "^3.8.0",
 		"@tiptap/extension-link": "^2.4.0",
