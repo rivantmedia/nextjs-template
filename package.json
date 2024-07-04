@@ -1,31 +1,22 @@
 {
 	"name": "@rivantmedia/next-template",
 	"version": "1.0.0",
+	"description": "A project template cli for rivant media",
+	"main": "index.js",
+	"type": "module",
 	"prettier": "@rivantmedia/prettier-config",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"bin": {
+		"template-cli": "./index.js"
+	},
+	"author": "Rajat Gupta",
+	"license": "MIT",
+	"devDependencies": {},
 	"dependencies": {
-		"@mantine/core": "^7.11.1",
-		"@mantine/hooks": "^7.11.1",
-		"next": "14.2.4",
-		"react": "^18",
-		"react-dom": "^18"
-	},
-	"devDependencies": {
+		"@babel/core": "^7.24.7",
 		"@rivantmedia/prettier-config": "^3.0.0",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"@typescript-eslint/eslint-plugin": "^7.15.0",
-		"eslint": "^8",
-		"eslint-config-next": "14.2.4",
-		"postcss": "^8.4.39",
-		"postcss-preset-mantine": "^1.15.0",
-		"postcss-simple-vars": "^7.0.1",
-		"typescript": "^5"
+		"inquirer": "^9.3.3"
 	}
 }
