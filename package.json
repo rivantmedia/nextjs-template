@@ -8,9 +8,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"bin": {
-		"template-cli": "./index.js"
-	},
+	"bin": "./index.js",
 	"author": "Rajat Gupta",
 	"license": "MIT",
 	"devDependencies": {},
