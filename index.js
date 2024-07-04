@@ -19,6 +19,7 @@ const QUESTIONS = [
 		type: "input",
 		message: "Project name:",
 		validate: function (input) {
+			if (input === ".") return true;
 			if (/^([A-Za-z\-\\_\d])+$/.test(input)) return true;
 			else
 				return "Project name may only include letters, numbers, underscores and hashes.";
@@ -37,7 +38,7 @@ inquirer.prompt(QUESTIONS).then((answers) => {
 	const projectName = answers["project-name"];
 	const templatePath = `${__dirname}/template/${template}`;
 
-	fs.mkdirSync(`${CURR_DIR}/${projectName}`);
+	if (projectName !== ".") fs.mkdirSync(`${CURR_DIR}/${projectName}`);
 
 	createDirectoryContents(templatePath, projectName, packageChoice);
 });
