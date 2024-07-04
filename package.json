@@ -2,8 +2,6 @@
 	"name": "@rivantmedia/next-template",
 	"version": "1.0.0",
 	"prettier": "@rivantmedia/prettier-config",
-	"bin": "./bin/cli.js",
-	"type": "module",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
