@@ -18,6 +18,8 @@ const createDirectoryContents = (
 	installPackage
 ) => {
 	function start(templatePath, newProjectPath) {
+		const isNameDot = newProjectPath === ".";
+
 		const filesToCreate = fs.readdirSync(templatePath);
 
 		filesToCreate.forEach((file) => {
@@ -30,12 +32,33 @@ const createDirectoryContents = (
 				const contents = fs.readFileSync(origFilePath, "utf8");
 
 				// Rename
-				if (file === ".npmignore") file = ".gitignore";
+				if (file === "package.json") {
+					const objectData = JSON.parse(contents);
+					const ifNameIsDot = CURR_DIR.split("\\").at(
+						CURR_DIR.split("\\").length - 1
+					);
 
-				const writePath = `${CURR_DIR}/${newProjectPath}/${file}`;
-				fs.writeFileSync(writePath, contents, "utf8");
+					const newObjectData = {
+						...objectData,
+						name: isNameDot ? ifNameIsDot : newProjectPath
+					};
+					const newContents = JSON.stringify(newObjectData);
+					const writePath = isNameDot
+						? `${CURR_DIR}/${file}`
+						: `${CURR_DIR}/${newProjectPath}/${file}`;
+					fs.writeFileSync(writePath, newContents, "utf8");
+				} else {
+					const writePath = isNameDot
+						? `${CURR_DIR}/${file}`
+						: `${CURR_DIR}/${newProjectPath}/${file}`;
+					fs.writeFileSync(writePath, contents, "utf8");
+				}
 			} else if (stats.isDirectory()) {
-				fs.mkdirSync(`${CURR_DIR}/${newProjectPath}/${file}`);
+				fs.mkdirSync(
+					isNameDot
+						? `${CURR_DIR}/${file}`
+						: `${CURR_DIR}/${newProjectPath}/${file}`
+				);
 
 				// recursive call
 				start(`${templatePath}/${file}`, `${newProjectPath}/${file}`);
