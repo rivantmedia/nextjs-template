@@ -1,6 +1,6 @@
 {
 	"name": "@rivantmedia/next-template",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "A project template cli for rivant media",
 	"main": "index.js",
 	"type": "module",
