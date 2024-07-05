@@ -27,6 +27,26 @@ Them select any of the package installation manager (use arrow keys to navigate 
   yarn
 ```
 
+Type the following command to run the project:
+
+for NPM
+
+```bash
+$ cd [project-name] && npm run dev
+```
+
+for PNPM
+
+```bash
+$ cd [project-name] && pnpm dev
+```
+
+for yarn
+
+```bash
+$ cd [project-name] && yarn dev
+```
+
 ## Downloading and Installation if a project folder had been created
 
 To install the NextJs Template for [@rivantmedia](https://github.com/rivantmedia), run the following command
@@ -48,6 +68,26 @@ Them select any of the package installation manager (use arrow keys to navigate 
 > npm
   pnpm
   yarn
+```
+
+Type the following command to run the project:
+
+for NPM
+
+```bash
+$ npm run dev
+```
+
+for PNPM
+
+```bash
+$ pnpm dev
+```
+
+for yarn
+
+```bash
+$ yarn dev
 ```
 
 # How to add more Templates
