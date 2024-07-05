@@ -41,7 +41,7 @@ for PNPM
 $ cd [project-name] && pnpm dev
 ```
 
-for yarn
+for YARN
 
 ```bash
 $ cd [project-name] && yarn dev
@@ -84,7 +84,7 @@ for PNPM
 $ pnpm dev
 ```
 
-for yarn
+for YARN
 
 ```bash
 $ yarn dev
