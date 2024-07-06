@@ -1,4 +1,6 @@
-# How to setup our NextJs Template
+# How to setup our Template
+
+Right now our npx Template CLI have only one template i.e. NextJs Template.
 
 ## Prerequisites:
 
@@ -98,3 +100,36 @@ $ yarn dev
 -   Then, you need to add that template in the `template` folder.
 -   After, this commit and publish the package.
 -   You are now able to select the template of your choice to download and install.
+
+## How to select a template if multiple template are present:
+
+```bash
+$ npx @rivantmedia/next-template@latest
+```
+
+Now you can select any of the template (use arrow keys to navigate and enter to select):
+
+```bash
+? Which template would you like to choose?
+> nextjs-ts-rivant-template
+  nextjs-js-rivant-template
+  react-js-rivant-template
+  react-ts-rivant-template
+```
+
+Give the desired Project Name as shown:
+
+```bash
+? Project name: project-name-of-your-choice
+```
+
+Them select any of the package installation manager (use arrow keys to navigate and enter to select):
+
+```bash
+? Which installation package manager would you like to choose?
+> npm
+  pnpm
+  yarn
+```
+
+### Congratulations! you are ready to use this template
