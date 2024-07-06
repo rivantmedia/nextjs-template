@@ -94,4 +94,7 @@ $ yarn dev
 
 -   Right now our npx Template CLI have only one template i.e. NextJs Template.
 -   To add more templates, Create a template of your choice with everything you need.
--   To add more templates, you need to add more templates in the `template` folder.
+-   Make sure that template does not have `package-lock.json` or `yarn.lock` or `pnpm-lock.yaml`.
+-   Then, you need to add that template in the `template` folder.
+-   After, this commit and publish the package.
+-   You are now able to select the template of your choice to download and install.
