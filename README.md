@@ -91,3 +91,7 @@ $ yarn dev
 ```
 
 # How to add more Templates
+
+-   Right now our npx Template CLI have only one template i.e. NextJs Template.
+-   To add more templates, Create a template of your choice with everything you need.
+-   To add more templates, you need to add more templates in the `template` folder.
