@@ -34,9 +34,10 @@ const createDirectoryContents = (
 				// Rename
 				if (file === "package.json") {
 					const objectData = JSON.parse(contents);
-					const ifNameIsDot = CURR_DIR.split("\\").at(
-						CURR_DIR.split("\\").length - 1
-					);
+					const ifNameIsDot = CURR_DIR.split("\\")
+						.at(CURR_DIR.split("\\").length - 1)
+						.toLowerCase()
+						.replace(/ /g, "-");
 
 					const newObjectData = {
 						...objectData,
